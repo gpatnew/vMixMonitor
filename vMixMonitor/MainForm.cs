@@ -113,9 +113,15 @@ namespace vMixMonitor
                 countDownBrush.Color = Color.Black;
                 Refresh();
             }
+            else if (online)
+            {
+                countDown = leftTime.Minutes.ToString("00") + ":" + leftTime.Seconds.ToString("00") + ":" + (leftTime.Milliseconds / 10).ToString("00")  + " Testing ";
+                countDownBrush.Color = Color.Green;
+                Refresh();
+            }
             else
             {
-                countDown = "Timer OFF";
+                countDown = " off ";
                 countDownBrush.Color = Color.Green;
                 Refresh();
             }
