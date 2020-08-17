@@ -13,9 +13,17 @@ Display realtime status of the Live Stream
 Display countdown timer based on a timed video resource within vMix inputs.
 Have the solution be portable and extenable.
 
+Enhancement:
+ Handle an Outro video playing on the live stream where santuary audio/video is not live.
+  Label would still be "STREAMING ON"
+  new Label micStatus MIC OFF/ON
+  new Label activeCamera "Title of Camera"
+ 
 Requirements:
 
 Instance of vMix running on network.
+Timer mp4
+
 
 
 https://www.vmix.com/help23/
