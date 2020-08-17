@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="vmix">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="version" type="xs:string" />
+        <xs:element name="edition" type="xs:string" />
+        <xs:element name="preset" type="xs:string" />
+        <xs:element name="inputs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="input">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="key" type="xs:string" use="required" />
+                      <xs:attribute name="number" type="xs:unsignedInt" use="required" />
+                      <xs:attribute name="type" type="xs:string" use="required" />
+                      <xs:attribute name="title" type="xs:string" use="required" />
+                      <xs:attribute name="shortTitle" type="xs:string" use="required" />
+                      <xs:attribute name="state" type="xs:string" use="required" />
+                      <xs:attribute name="position" type="xs:unsignedInt" use="required" />
+                      <xs:attribute name="duration" type="xs:unsignedInt" use="required" />
+                      <xs:attribute name="loop" type="xs:string" use="required" />
+                      <xs:attribute name="muted" type="xs:string" use="optional" />
+                      <xs:attribute name="volume" type="xs:decimal" use="optional" />
+                      <xs:attribute name="balance" type="xs:deecimal" use="optional" />
+                      <xs:attribute name="solo" type="xs:string" use="optional" />
+                      <xs:attribute name="audiobusses" type="xs:string" use="optional" />
+                      <xs:attribute name="meterF1" type="xs:unsignedByte" use="optional" />
+                      <xs:attribute name="meterF2" type="xs:unsignedByte" use="optional" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="overlays">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="overlay">
+                <xs:complexType>
+                  <xs:attribute name="number" type="xs:unsignedInt" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="preview" type="xs:unsignedInt" />
+        <xs:element name="active" type="xs:unsignedInt" />
+        <xs:element name="fadeToBlack" type="xs:string" />
+        <xs:element name="transitions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="transition">
+                <xs:complexType>
+                  <xs:attribute name="number" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="effect" type="xs:string" use="required" />
+                  <xs:attribute name="duration" type="xs:unsignedShort" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="recording" type="xs:string" />
+        <xs:element name="external" type="xs:string" />
+        <xs:element name="streaming" type="xs:string" />
+        <xs:element name="playList" type="xs:string" />
+        <xs:element name="multiCorder" type="xs:string" />
+        <xs:element name="fullscreen" type="xs:string" />
+        <xs:element name="audio">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="master">
+                <xs:complexType>
+                  <xs:attribute name="volume" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="muted" type="xs:string" use="required" />
+                  <xs:attribute name="meterF1" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="meterF2" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="headphonesVolume" type="xs:unsignedByte" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

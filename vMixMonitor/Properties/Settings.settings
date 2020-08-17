@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="vMixMonitor.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="vMixUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://172.25.61.97:8088</Value>
+    </Setting>
+    <Setting Name="TimerKeyword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Loading Timer</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

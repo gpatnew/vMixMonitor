@@ -1,0 +1,116 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Xml;
+using System.Xml.Serialization;
+using vMixMonitor.Data;
+using static vMixMonitor.Data.@enum;
+
+namespace vMixMonitor
+{
+    /// <summary>
+    /// Vmix Calls and parsing
+    /// </summary>
+    public class vMixHelper
+    {
+        public vmix currentDoc;
+        public bool onLine { get; set; }
+        /// <summary>
+        ///vMix web interface base url
+        /// </summary>
+        public string baseUrl { get; set; }
+
+        public bool streaming { get; set; }
+        /// <summary>
+        /// Ketword to locate timer element
+        /// </summary>
+        public string timerKeyword { get; set; }
+        public DateTime endTime { get; internal set; }
+
+        public InputState timerState { get; set; }
+
+
+
+        public vMixHelper()
+        {
+            endTime = DateTime.Now;
+            baseUrl = Properties.Settings.Default.vMixUrl;
+            timerKeyword = Properties.Settings.Default.TimerKeyword;
+            RefreshDoc();
+            if(currentDoc != null)
+            {
+                onLine = true;
+                SetTimerInfo();
+            }
+            else
+            {
+                onLine = false;
+            }
+        }
+
+        private void SetTimerInfo()
+        {
+            vmixInput timerInput = null;
+            foreach (var item in currentDoc.inputs)
+            {
+                if(item.title.Contains(timerKeyword))
+                {
+                    timerInput = item;
+                }
+            }
+
+            if (timerInput != null)
+            {
+                if (timerInput.state == @enum.InputState.Running.ToString())
+                {
+                    timerState = @enum.InputState.Running;
+                    endTime = DateTime.Now.AddMilliseconds(-(timerInput.duration - timerInput.position));
+                }
+                else
+                {
+                    timerState = @enum.InputState.Paused;
+                    endTime = DateTime.Now;
+                }
+                
+            }
+            else
+            {
+                timerState = @enum.InputState.Missing;
+                endTime = DateTime.Now;
+            }
+        }
+
+        public void RefreshDoc()
+        {
+            currentDoc = ApiDoc();
+            if(currentDoc != null)
+            {
+                streaming = currentDoc.streaming == "True";
+                SetTimerInfo();
+            }
+        }
+
+        private vmix ApiDoc()
+        {
+            var settings = new XmlReaderSettings();
+            var doc = new vmix();
+            try
+            {
+
+                var reader = XmlReader.Create(baseUrl + "/api", settings);
+                XmlSerializer serializer = new XmlSerializer(typeof(vmix));
+                doc = (vmix)serializer.Deserialize(reader);
+                onLine = true;
+            }
+            catch(Exception e)
+            {
+                doc = null;
+                onLine = false;
+            }
+            
+           
+            return doc;
+        }
+    }
+}
