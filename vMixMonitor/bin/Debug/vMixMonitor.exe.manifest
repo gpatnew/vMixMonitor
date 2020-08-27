@@ -54,6 +54,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Serilog.dll" size="126464">
+      <assemblyIdentity name="Serilog" version="2.0.0.0" publicKeyToken="24C2F752A8E58A10" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>c0QyHwOFoBidZB16ETcVJLkTJ5MLuOu+8tq9lL2sC6g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="vMixMonitor.exe" size="23488">
       <assemblyIdentity name="vMixMonitor" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -61,7 +73,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xueya0J4UfLeTQqo6vIc1UiKH2FTiLFn9r/sAEdN9sM=</dsig:DigestValue>
+        <dsig:DigestValue>DBpcUjJG1N+OYFfHf7E0m1Ign+jEVzUOHmIFzwForxQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

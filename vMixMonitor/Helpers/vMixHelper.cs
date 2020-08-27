@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Serilog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -107,6 +108,7 @@ namespace vMixMonitor
             {
                 doc = null;
                 onLine = false;
+                Log.Error(e, "Error");
             }
             
            

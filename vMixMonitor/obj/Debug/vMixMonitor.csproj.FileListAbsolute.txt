@@ -17,3 +17,5 @@ G:\projects\vMix Monitor\vMixMonitor\bin\Debug\vMixMonitor.exe.manifest
 G:\projects\vMix Monitor\vMixMonitor\bin\Debug\vMixMonitor.application
 G:\projects\vMix Monitor\vMixMonitor\obj\Debug\vMixMonitor.exe.manifest
 G:\projects\vMix Monitor\vMixMonitor\obj\Debug\vMixMonitor.application
+G:\projects\vMix Monitor\vMixMonitor\bin\Debug\Serilog.dll
+G:\projects\vMix Monitor\vMixMonitor\bin\Debug\Serilog.xml
