@@ -66,24 +66,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="vMixMonitor.exe" size="23488">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="vMixMonitor.exe" size="29120">
       <assemblyIdentity name="vMixMonitor" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DBpcUjJG1N+OYFfHf7E0m1Ign+jEVzUOHmIFzwForxQ=</dsig:DigestValue>
+        <dsig:DigestValue>ZWUkIWzadktfGoLbtipyWEL4trK2XjNqbAzA2DTSdEA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="vMixMonitor.exe.config" size="1082">
+  <file name="vMixMonitor.exe.config" size="1595">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ozQMbNHs2S75WcMX9QcxrpVAdUO2XheIVtOQNuojavo=</dsig:DigestValue>
+      <dsig:DigestValue>Dyl+rfjjzbU8CVfVcZOP1PMPjovn9/gRuFBbpqXlw4c=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

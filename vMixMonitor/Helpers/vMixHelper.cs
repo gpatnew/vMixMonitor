@@ -15,6 +15,11 @@ namespace vMixMonitor
     /// </summary>
     public class vMixHelper
     {
+        private bool _streaming = false;
+
+        /// <summary>
+        /// Current API DOC
+        /// </summary>
         public vmix currentDoc;
         public bool onLine { get; set; }
         /// <summary>
@@ -22,16 +27,30 @@ namespace vMixMonitor
         /// </summary>
         public string baseUrl { get; set; }
 
-        public bool streaming { get; set; }
+        public bool streaming {
+            get { return _streaming; }
+            set
+            {
+                _streaming = !Properties.Settings.Default.isTestStream ? value : true;
+            }
+        }       
+        
         /// <summary>
         /// Ketword to locate timer element
         /// </summary>
         public string timerKeyword { get; set; }
         public DateTime endTime { get; internal set; }
 
+        /// <summary>
+        /// Volume of the control that is monitored for volume
+        /// </summary>
+        public decimal audioVolume { get; set; }
         public InputState timerState { get; set; }
 
-
+        /// <summary>
+        /// The active input to the output
+        /// </summary>
+        public Data.vmixInput activeInput { get; set; }
 
         public vMixHelper()
         {
@@ -73,7 +92,6 @@ namespace vMixMonitor
                     timerState = @enum.InputState.Paused;
                     endTime = DateTime.Now;
                 }
-                
             }
             else
             {
@@ -88,6 +106,17 @@ namespace vMixMonitor
             if(currentDoc != null)
             {
                 streaming = currentDoc.streaming == "True";
+                var inputs = currentDoc.inputs.ToList<vmixInput>();
+                activeInput = inputs.Find(i => i.number == currentDoc.active);
+                try
+                {
+                    audioVolume = Properties.Settings.Default.IsMasterOutput ? currentDoc.audio.master.volume : inputs.Find(i => i.title.Contains(Properties.Settings.Default.AudiouInput)).volume;
+                }
+                catch(NullReferenceException ne)
+                {
+                    Log.Warning("Can't find the audio input check setup.");
+                    audioVolume = -99;
+                }
                 SetTimerInfo();
             }
         }

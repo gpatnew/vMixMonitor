@@ -46,5 +46,53 @@ namespace vMixMonitor.Properties {
                 this["TimerKeyword"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Audio Input")]
+        public string AudiouInput {
+            get {
+                return ((string)(this["AudiouInput"]));
+            }
+            set {
+                this["AudiouInput"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool IsMasterOutput {
+            get {
+                return ((bool)(this["IsMasterOutput"]));
+            }
+            set {
+                this["IsMasterOutput"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Camera 3 ")]
+        public string OutroInput {
+            get {
+                return ((string)(this["OutroInput"]));
+            }
+            set {
+                this["OutroInput"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool isTestStream {
+            get {
+                return ((bool)(this["isTestStream"]));
+            }
+            set {
+                this["isTestStream"] = value;
+            }
+        }
     }
 }

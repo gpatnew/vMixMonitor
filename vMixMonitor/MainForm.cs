@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Serilog;
 
 namespace vMixMonitor
 {
@@ -32,25 +33,33 @@ namespace vMixMonitor
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
-            countDownTimer = new System.Windows.Forms.Timer();
-            timer = new System.Windows.Forms.Timer();
-           
-            countDownFont = new Font(new FontFamily("Arial"), 50, FontStyle.Bold);
-            countDownBrush = new SolidBrush(Color.Green);
-            
+            try
+            {
 
-            timer.Tick += Timer_Tick;
-            timer.Interval = 500;
-            countDownTimer.Tick += CountDownTimer_Tick;
-            this.Paint += new PaintEventHandler(MainForm_Paint);
 
-            this.DoubleBuffered = true;
-            this.ResizeRedraw = true;
-            countDownTimer.Interval = 5;
 
-            timer.Start();
+                countDownTimer = new System.Windows.Forms.Timer();
+                timer = new System.Windows.Forms.Timer();
 
+                countDownFont = new Font(new FontFamily("Arial"), 50, FontStyle.Bold);
+                countDownBrush = new SolidBrush(Color.Green);
+
+
+                timer.Tick += Timer_Tick;
+                timer.Interval = 500;
+                countDownTimer.Tick += CountDownTimer_Tick;
+                this.Paint += new PaintEventHandler(MainForm_Paint);
+
+                this.DoubleBuffered = true;
+                this.ResizeRedraw = true;
+                countDownTimer.Interval = 5;
+
+                timer.Start();
+            }
+            catch(Exception ex)
+            {
+                Log.Error(ex, "Error");
+            }
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -59,6 +68,7 @@ namespace vMixMonitor
             endTime = vmixhelper.endTime;
             online = vmixhelper.onLine;
             streaming = vmixhelper.streaming;
+            SetLabels();
             if (online && streaming)
             {                
                 this.labelOnlineStatus.Text = "STREAMING ON";
@@ -89,6 +99,29 @@ namespace vMixMonitor
                 countDownTimer.Stop();
             }
 
+        }
+
+        private void SetLabels()
+        {
+            if (vmixhelper.audioVolume > 0 && streaming)
+            {
+                lblMicStatus.Text = "MIC LIVE";
+                lblMicStatus.ForeColor = Color.OrangeRed;
+                lblMicStatus.BackColor = Color.Black;
+            }
+            else if(vmixhelper.audioVolume >= 0 && !streaming)
+            {
+                lblMicStatus.Text = "MIC OFF";
+                lblMicStatus.ForeColor = Color.AliceBlue;
+                lblMicStatus.BackColor = Color.Black;
+            }
+            else if(vmixhelper.audioVolume < 0)
+            {
+                lblMicStatus.Text = "DISCONNECTED";
+                lblMicStatus.ForeColor = Color.AliceBlue;
+                lblMicStatus.BackColor = Color.Black;
+            }
+            lblActiveInput.Text = vmixhelper.activeInput != null ? vmixhelper.activeInput.shortTitle : "CAMERA INPUT";
         }
 
         private void MainForm_Paint(object sender, PaintEventArgs e)
@@ -130,18 +163,21 @@ namespace vMixMonitor
         private void buttonSetup_Click(object sender, EventArgs e)
         {
             this.groupBox1.Visible = !groupBox1.Visible;
-            this.textBox1.Text = Properties.Settings.Default.vMixUrl;
-            this.textBox2.Text = Properties.Settings.Default.TimerKeyword;
+            this.tbUrl.Text = Properties.Settings.Default.vMixUrl;
+            this.tbTimerInput.Text = Properties.Settings.Default.TimerKeyword;
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.vMixUrl = this.textBox1.Text;
-            Properties.Settings.Default.TimerKeyword = this.textBox2.Text;
-
+            Properties.Settings.Default.vMixUrl = this.tbUrl.Text;
+            Properties.Settings.Default.TimerKeyword = this.tbTimerInput.Text;
+            Properties.Settings.Default.IsMasterOutput = this.cbAudioIsMaster.Checked;
+            Properties.Settings.Default.isTestStream = this.cbUseTestStream.Checked;
+            Properties.Settings.Default.OutroInput = this.tbOutroInpu.Text;
             Properties.Settings.Default.Save();
 
             this.groupBox1.Visible = false;
         }
+
     }
 }
