@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 using vMixMonitor.Data;
@@ -100,9 +101,10 @@ namespace vMixMonitor
             }
         }
 
-        public void RefreshDoc()
+        public async void  RefreshDoc()
         {
-            currentDoc = ApiDoc();
+            
+            currentDoc = await Task.Run(() => ApiDoc());
             if(currentDoc != null)
             {
                 streaming = currentDoc.streaming == "True";

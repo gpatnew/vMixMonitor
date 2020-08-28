@@ -152,7 +152,7 @@
             this.lblActiveInput.BackColor = System.Drawing.Color.Black;
             this.lblActiveInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActiveInput.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblActiveInput.Location = new System.Drawing.Point(295, 346);
+            this.lblActiveInput.Location = new System.Drawing.Point(134, 641);
             this.lblActiveInput.MinimumSize = new System.Drawing.Size(600, 80);
             this.lblActiveInput.Name = "lblActiveInput";
             this.lblActiveInput.Size = new System.Drawing.Size(600, 80);
@@ -166,7 +166,7 @@
             this.lblMicStatus.BackColor = System.Drawing.Color.Black;
             this.lblMicStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMicStatus.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblMicStatus.Location = new System.Drawing.Point(1065, 346);
+            this.lblMicStatus.Location = new System.Drawing.Point(1184, 641);
             this.lblMicStatus.MinimumSize = new System.Drawing.Size(600, 80);
             this.lblMicStatus.Name = "lblMicStatus";
             this.lblMicStatus.Size = new System.Drawing.Size(600, 80);

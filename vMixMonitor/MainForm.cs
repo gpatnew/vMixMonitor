@@ -104,7 +104,7 @@ namespace vMixMonitor
                 lblMicStatus.ForeColor = Color.OrangeRed;
                 lblMicStatus.BackColor = Color.Black;
             }
-            else if(vmixhelper.audioVolume >= 0 && !streaming)
+            else if(vmixhelper.audioVolume >= 0 )
             {
                 lblMicStatus.Text = "MIC OFF";
                 lblMicStatus.ForeColor = Color.AliceBlue;
@@ -117,6 +117,13 @@ namespace vMixMonitor
                 lblMicStatus.BackColor = Color.Black;
             }
             lblActiveInput.Text = vmixhelper.activeInput != null ? vmixhelper.activeInput.shortTitle : "CAMERA INPUT";
+
+            if(vmixhelper.onLine && vmixhelper.activeInput.title == Properties.Settings.Default.OutroInput)
+            {
+                countDown = "OUTRO CONTENT LIVE";
+                countDownBrush.Color = Color.Green;
+                Refresh();
+            }
         }
 
         private void MainForm_Paint(object sender, PaintEventArgs e)
@@ -136,12 +143,12 @@ namespace vMixMonitor
             }
             else if (online && streaming)
             {
-                countDown = leftTime.Minutes.ToString("00") + ":" + leftTime.Seconds.ToString("00") + ":" + (leftTime.Milliseconds / 10).ToString("00");
+                countDown = leftTime.Minutes.ToString("00") + ":" + leftTime.Seconds.ToString("00") + "." + (leftTime.Milliseconds / 10).ToString("00");
                 countDownBrush.Color = Color.Black;
             }
             else if (online)
             {
-                countDown = leftTime.Minutes.ToString("00") + ":" + leftTime.Seconds.ToString("00") + ":" + (leftTime.Milliseconds / 10).ToString("00")  + " Testing ";
+                countDown = leftTime.Minutes.ToString("00") + ":" + leftTime.Seconds.ToString("00") + "." + (leftTime.Milliseconds / 10).ToString("00")  + " Testing ";
                 countDownBrush.Color = Color.Green;
             }
             else

@@ -588,19 +588,19 @@ namespace vMixMonitor.Data {
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
     public partial class vmixAudioMaster {
         
-        private byte volumeField;
+        private decimal volumeField;
         
         private string mutedField;
         
-        private byte meterF1Field;
+        private decimal meterF1Field;
         
-        private byte meterF2Field;
+        private decimal meterF2Field;
         
-        private byte headphonesVolumeField;
+        private decimal headphonesVolumeField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public byte volume {
+        public decimal volume {
             get {
                 return this.volumeField;
             }
@@ -622,7 +622,7 @@ namespace vMixMonitor.Data {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public byte meterF1 {
+        public decimal meterF1 {
             get {
                 return this.meterF1Field;
             }
@@ -633,7 +633,7 @@ namespace vMixMonitor.Data {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public byte meterF2 {
+        public decimal meterF2 {
             get {
                 return this.meterF2Field;
             }
@@ -644,7 +644,7 @@ namespace vMixMonitor.Data {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public byte headphonesVolume {
+        public decimal headphonesVolume {
             get {
                 return this.headphonesVolumeField;
             }

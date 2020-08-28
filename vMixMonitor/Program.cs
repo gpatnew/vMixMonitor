@@ -16,7 +16,8 @@ namespace vMixMonitor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            if (!SingleInstance.AlreadyRunning())
+                Application.Run(new MainForm());
         }
     }
 }
