@@ -240,9 +240,9 @@ namespace vMixMonitor.Data {
         
         private string stateField;
         
-        private uint positionField;
+        private long positionField;
         
-        private uint durationField;
+        private long durationField;
         
         private string loopField;
         
@@ -258,16 +258,16 @@ namespace vMixMonitor.Data {
         
         private string audiobussesField;
         
-        private byte meterF1Field;
+        private decimal meterF1Field;
         
         private bool meterF1FieldSpecified;
         
-        private byte meterF2Field;
+        private decimal meterF2Field;
         
         private bool meterF2FieldSpecified;
         
         private string valueField;
-        
+       // <input key = "1d06abb7-6514-441b-8231-a85799bb68e4" number="2" type="Video" title="Camera 2" shortTitle="Camera 2" state="Running" position="70640" duration="635970" loop="True" muted="False" volume="92.23682" balance="0" solo="False" audiobusses="" meterF1="0.351174" meterF2="0.351174">Camera 2</input>
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public string key {
@@ -336,7 +336,7 @@ namespace vMixMonitor.Data {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public uint position {
+        public long position {
             get {
                 return this.positionField;
             }
@@ -347,7 +347,7 @@ namespace vMixMonitor.Data {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public uint duration {
+        public long duration {
             get {
                 return this.durationField;
             }
@@ -435,7 +435,7 @@ namespace vMixMonitor.Data {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public byte meterF1 {
+        public decimal meterF1 {
             get {
                 return this.meterF1Field;
             }
@@ -457,7 +457,7 @@ namespace vMixMonitor.Data {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public byte meterF2 {
+        public decimal meterF2 {
             get {
                 return this.meterF2Field;
             }

@@ -27,8 +27,6 @@ namespace vMixMonitor
         {
             InitializeComponent();
             this.groupBox1.Visible = false;
-           
-   
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -36,14 +34,11 @@ namespace vMixMonitor
             try
             {
 
-
-
                 countDownTimer = new System.Windows.Forms.Timer();
                 timer = new System.Windows.Forms.Timer();
 
-                countDownFont = new Font(new FontFamily("Arial"), 50, FontStyle.Bold);
+                countDownFont = new Font(new FontFamily("Arial"), 80, FontStyle.Bold);
                 countDownBrush = new SolidBrush(Color.Green);
-
 
                 timer.Tick += Timer_Tick;
                 timer.Interval = 500;
@@ -133,31 +128,28 @@ namespace vMixMonitor
         private void CountDownTimer_Tick(object sender, EventArgs e)
         {
             TimeSpan leftTime = DateTime.Now.Subtract(endTime);
-            if(leftTime.TotalMinutes <= 1 &&leftTime.TotalSeconds <= .5 && streaming)
+            if(leftTime.TotalMinutes <= 1 &&leftTime.TotalSeconds < 1 && streaming)
             {
                 countDown = "LIVE";
                 countDownBrush.Color = Color.Red;
-                Refresh();
                 countDownTimer.Stop();
             }
             else if (online && streaming)
             {
                 countDown = leftTime.Minutes.ToString("00") + ":" + leftTime.Seconds.ToString("00") + ":" + (leftTime.Milliseconds / 10).ToString("00");
                 countDownBrush.Color = Color.Black;
-                Refresh();
             }
             else if (online)
             {
                 countDown = leftTime.Minutes.ToString("00") + ":" + leftTime.Seconds.ToString("00") + ":" + (leftTime.Milliseconds / 10).ToString("00")  + " Testing ";
                 countDownBrush.Color = Color.Green;
-                Refresh();
             }
             else
             {
                 countDown = " off ";
                 countDownBrush.Color = Color.Green;
-                Refresh();
             }
+            Refresh();
         }
 
         private void buttonSetup_Click(object sender, EventArgs e)

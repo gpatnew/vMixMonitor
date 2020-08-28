@@ -1,0 +1,60 @@
+<vmix>
+<version>23.0.0.59</version>
+<edition>Trial</edition>
+<preset>C:\Users\Pat\Documents\vmix\OnAirOffAirTally.vmix</preset>
+<inputs>
+<input key="d5f016af-9edc-462a-aff6-ec5766ff08d0" number="1" type="Image" title="Camera 1" shortTitle="Camera 1" state="Paused" position="0" duration="0" loop="False">Camera 1</input>
+<input key="1d06abb7-6514-441b-8231-a85799bb68e4" number="2" type="Video" title="Camera 2" shortTitle="Camera 2" state="Running" position="70640" duration="635970" loop="True" muted="False" volume="92.23682" balance="0" solo="False" audiobusses="" meterF1="0.351174" meterF2="0.351174">Camera 2</input>
+<input key="b6981eb9-b53f-42e9-ad74-3b787323c3e2" number="3" type="DesktopCapture" title="Camera 3" shortTitle="Camera 3" state="Running" position="0" duration="0" loop="False">Camera 3</input>
+<input key="9c56e2a7-f5c4-4c67-b1fa-c7a816cfec9e" number="4" type="Video" title="Loading Timer_Green.mp4" shortTitle="Loading Timer_Green.mp4" state="Completed" position="300011" duration="300011" loop="False" muted="True" volume="100" balance="0" solo="False" audiobusses="M" meterF1="0" meterF2="0">Loading Timer_Green.mp4</input>
+<input key="43342ee9-255a-4e29-8e8b-b96061526dbf" number="5" type="Image" title="Welcome Slide" shortTitle="Welcome Slide" state="Paused" position="0" duration="0" loop="False">Welcome Slide</input>
+<input key="a2cc64b6-414b-44ec-b7f6-5851f8b608ea" number="6" type="Image" title="Off the air turkey" shortTitle="Off the air turkey" state="Paused" position="0" duration="0" loop="False">Off the air turkey</input>
+<input key="5e5fcdce-93a5-4d63-bd8a-badcd1802a45" number="7" type="Xaml" title="TimerClock.xaml" shortTitle="TimerClock.xaml" state="Paused" position="0" duration="0" loop="False" selectedIndex="0">
+TimerClock.xaml
+<text index="0" name="txtClock">{0:5:00 PM|HH:mm:ss}</text>
+</input>
+<input key="c42553a0-8376-4970-83fb-607d26859ef3" number="8" type="Colour" title="Colour Bars" shortTitle="Colour Bars" state="Paused" position="0" duration="0" loop="False">Colour Bars</input>
+<input key="156a9808-19f1-405e-a10c-e67f20a57220" number="9" type="Xaml" title="LowerThird Giving.xaml" shortTitle="LowerThird Giving.xaml" state="Paused" position="0" duration="0" loop="False" selectedIndex="0">
+LowerThird Giving.xaml
+<text index="0" name="Text1">GIVING</text>
+<text index="1" name="Text2">ALFC App or Web https://alfc.us/giving</text>
+<text index="2" name="Text3">Mail:</text>
+<text index="3" name="Text4">5610 Kitsap Way, Suite 230 Bremerton, WA 98312</text>
+<image index="0" name="Object"/>
+<image index="1" name="Image1">file:///G:/projects/ALFC video assets/LowerThird Blank.png</image>
+</input>
+<input key="a9b32351-2252-446f-91a5-c709bcbdc47b" number="10" type="Xaml" title="LowerThird Blank.xaml" shortTitle="LowerThird Blank.xaml" state="Paused" position="0" duration="0" loop="False" selectedIndex="0">
+LowerThird Blank.xaml
+<text index="0" name="Title">Steve Wexler</text>
+<text index="1" name="SubHeader">Senior Pastor</text>
+<image index="0" name="Object"/>
+<image index="1" name="Image1">file:///G:/projects/ALFC video assets/LowerThird Blank.png</image>
+</input>
+</inputs>
+<overlays>
+<overlay number="1"/>
+<overlay number="2"/>
+<overlay number="3"/>
+<overlay number="4"/>
+<overlay number="5"/>
+<overlay number="6"/>
+</overlays>
+<preview>3</preview>
+<active>2</active>
+<fadeToBlack>False</fadeToBlack>
+<transitions>
+<transition number="1" effect="Fade" duration="500"/>
+<transition number="2" effect="Merge" duration="1000"/>
+<transition number="3" effect="Wipe" duration="1000"/>
+<transition number="4" effect="CubeZoom" duration="1000"/>
+</transitions>
+<recording>False</recording>
+<external>False</external>
+<streaming>False</streaming>
+<playList>False</playList>
+<multiCorder>False</multiCorder>
+<fullscreen>False</fullscreen>
+<audio>
+<master volume="100" muted="False" meterF1="0" meterF2="0" headphonesVolume="100"/>
+</audio>
+</vmix>
