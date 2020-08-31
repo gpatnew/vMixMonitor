@@ -25,7 +25,7 @@ namespace vMixMonitor.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://172.25.61.97:8088")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://192.168.0.33:8080")]
         public string vMixUrl {
             get {
                 return ((string)(this["vMixUrl"]));

@@ -103,7 +103,7 @@ namespace vMixMonitor
 
         public async void  RefreshDoc()
         {
-            
+            Log.Debug("Refresh API Doc");
             currentDoc = await Task.Run(() => ApiDoc());
             if(currentDoc != null)
             {
@@ -116,21 +116,25 @@ namespace vMixMonitor
                 }
                 catch(NullReferenceException ne)
                 {
-                    Log.Warning("Can't find the audio input check setup.");
+                    Log.Warning(ne, "Can't find the audio input check setup.");
                     audioVolume = -99;
                 }
                 SetTimerInfo();
             }
+            Log.Debug("Done Refresh");
         }
 
         private vmix ApiDoc()
         {
             var settings = new XmlReaderSettings();
             var doc = new vmix();
+            
             try
             {
 
+                Log.Debug("Read API");
                 var reader = XmlReader.Create(baseUrl + "/api", settings);
+                Log.Debug("serialize");
                 XmlSerializer serializer = new XmlSerializer(typeof(vmix));
                 doc = (vmix)serializer.Deserialize(reader);
                 onLine = true;
@@ -139,7 +143,7 @@ namespace vMixMonitor
             {
                 doc = null;
                 onLine = false;
-                Log.Error(e, "Error");
+                Log.Error(e, "Reader Error");
             }
             
            

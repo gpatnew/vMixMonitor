@@ -29,6 +29,7 @@ namespace vMixMonitor
             this.groupBox1.Visible = false;
         }
 
+       
         private void MainForm_Load(object sender, EventArgs e)
         {
             try
@@ -161,9 +162,7 @@ namespace vMixMonitor
 
         private void buttonSetup_Click(object sender, EventArgs e)
         {
-            this.groupBox1.Visible = !groupBox1.Visible;
-            this.tbUrl.Text = Properties.Settings.Default.vMixUrl;
-            this.tbTimerInput.Text = Properties.Settings.Default.TimerKeyword;
+            ShowSetup();
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
@@ -178,5 +177,24 @@ namespace vMixMonitor
             this.groupBox1.Visible = false;
         }
 
+        private void tsSetup_Click(object sender, EventArgs e)
+        {
+            ShowSetup();
+        }
+
+        private void ShowSetup()
+        {
+            this.groupBox1.Visible = !groupBox1.Visible;
+            this.tbUrl.Text = Properties.Settings.Default.vMixUrl;
+            this.tbTimerInput.Text = Properties.Settings.Default.TimerKeyword;
+            this.tbOutroInpu.Text = Properties.Settings.Default.OutroInput;
+            this.tbAudioInpu.Text = Properties.Settings.Default.AudiouInput;
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var h = new HelpFrom();
+            h.CreateForm();
+        }
     }
 }

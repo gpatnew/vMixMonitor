@@ -35,7 +35,6 @@
             this.buttonOk = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblActiveInput = new System.Windows.Forms.Label();
             this.lblMicStatus = new System.Windows.Forms.Label();
             this.tbOutroInpu = new System.Windows.Forms.TextBox();
@@ -44,14 +43,19 @@
             this.tbAudioInpu = new System.Windows.Forms.TextBox();
             this.tbTimerInput = new System.Windows.Forms.TextBox();
             this.tbUrl = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.tsSetup = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelOnlineStatus
             // 
             this.labelOnlineStatus.BackColor = System.Drawing.SystemColors.Highlight;
             this.labelOnlineStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 120F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOnlineStatus.Location = new System.Drawing.Point(12, 9);
+            this.labelOnlineStatus.Location = new System.Drawing.Point(12, 24);
             this.labelOnlineStatus.Name = "labelOnlineStatus";
             this.labelOnlineStatus.Size = new System.Drawing.Size(1857, 294);
             this.labelOnlineStatus.TabIndex = 0;
@@ -133,18 +137,6 @@
             this.label1.Size = new System.Drawing.Size(84, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "vMix URL";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.Location = new System.Drawing.Point(62, 894);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "SETUP";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.buttonSetup_Click);
             // 
             // lblActiveInput
             // 
@@ -237,6 +229,43 @@
             this.tbUrl.TabIndex = 2;
             this.tbUrl.Text = global::vMixMonitor.Properties.Settings.Default.vMixUrl;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsSetup,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1881, 24);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // tsSetup
+            // 
+            this.tsSetup.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.tsSetup.Name = "tsSetup";
+            this.tsSetup.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.tsSetup.Size = new System.Drawing.Size(49, 20);
+            this.tsSetup.Text = "Setup";
+            this.tsSetup.ToolTipText = "Setup ";
+            this.tsSetup.Click += new System.EventHandler(this.tsSetup_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,15 +273,18 @@
             this.ClientSize = new System.Drawing.Size(1881, 956);
             this.Controls.Add(this.lblMicStatus);
             this.Controls.Add(this.lblActiveInput);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelOnlineStatus);
+            this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "vMIX MONITOR";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,7 +298,6 @@
         private System.Windows.Forms.TextBox tbUrl;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbAudioInpu;
@@ -276,6 +307,10 @@
         private System.Windows.Forms.TextBox tbOutroInpu;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox cbUseTestStream;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem tsSetup;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 
