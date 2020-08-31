@@ -16,6 +16,8 @@
             if (disposing && (components != null))
             {
                 components.Dispose();
+                countDownBrush.Dispose();
+                countDownFont.Dispose();
             }
             base.Dispose(disposing);
         }

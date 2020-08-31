@@ -1,46 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\professional\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="15.0">
- <Targets>
-  <Target Name="G:\projects\vMix Monitor\vMixMonitor\bin\Debug\vMixMonitor.exe">
-   <Modules>
-    <Module Name="vmixmonitor.exe">
-     <Namespaces>
-      <Namespace Name="vMixMonitor">
-       <Types>
-        <Type Name="MainForm" Kind="Class" Accessibility="Public" ExternallyVisible="True">
-         <Members>
-          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
-           <Messages>
-            <Message Id="countDownBrush" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2020-08-29 13:07:49Z" FixCategory="NonBreaking">
-             <Issue Certainty="75" Level="Warning" Path="G:\projects\vMix Monitor\vMixMonitor" File="MainForm.Designer.cs" Line="15">'MainForm' contains field 'MainForm.countDownBrush' that is of IDisposable type: 'SolidBrush'. Change the Dispose method on 'MainForm' to call Dispose or Close on this field.</Issue>
-            </Message>
-            <Message Id="countDownFont" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2020-08-29 13:07:49Z" FixCategory="NonBreaking">
-             <Issue Certainty="75" Level="Warning" Path="G:\projects\vMix Monitor\vMixMonitor" File="MainForm.Designer.cs" Line="15">'MainForm' contains field 'MainForm.countDownFont' that is of IDisposable type: 'Font'. Change the Dispose method on 'MainForm' to call Dispose or Close on this field.</Issue>
-            </Message>
-           </Messages>
-          </Member>
-         </Members>
-        </Type>
-       </Types>
-      </Namespace>
-     </Namespaces>
-    </Module>
-   </Modules>
-  </Target>
- </Targets>
- <Rules>
-  <Rule TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213">
-   <Name>Disposable fields should be disposed</Name>
-   <Description>If a type that implements IDisposable owns fields that also implement IDisposable, the encapsulating type's Dispose() implementation should call Dispose() on each disposable field.</Description>
-   <Resolution Name="Default">{0} contains field {1} that is of IDisposable type: {2}. Change the Dispose method on {0} to call Dispose or Close on this field.</Resolution>
-   <Owner />
-   <Url>http://msdn.microsoft.com/library/ms182328.aspx</Url>
-   <Email>[none]</Email>
-   <MessageLevel Certainty="75">Warning</MessageLevel>
-   <File Name="usagerules.dll" Version="15.0.0.0" />
-  </Rule>
- </Rules>
  <Localized>
   <String Key="Category">Category</String>
   <String Key="Certainty">Certainty</String>
