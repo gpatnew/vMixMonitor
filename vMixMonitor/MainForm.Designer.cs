@@ -39,16 +39,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblActiveInput = new System.Windows.Forms.Label();
             this.lblMicStatus = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.tsSetup = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbOutroInpu = new System.Windows.Forms.TextBox();
             this.cbUseTestStream = new System.Windows.Forms.CheckBox();
             this.cbAudioIsMaster = new System.Windows.Forms.CheckBox();
             this.tbAudioInpu = new System.Windows.Forms.TextBox();
             this.tbTimerInput = new System.Windows.Forms.TextBox();
             this.tbUrl = new System.Windows.Forms.TextBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tsSetup = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -168,6 +169,43 @@
             this.lblMicStatus.Text = "MIC Status";
             this.lblMicStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsSetup,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1881, 24);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // tsSetup
+            // 
+            this.tsSetup.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.tsSetup.Name = "tsSetup";
+            this.tsSetup.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.tsSetup.Size = new System.Drawing.Size(49, 20);
+            this.tsSetup.Text = "Setup";
+            this.tsSetup.ToolTipText = "Setup ";
+            this.tsSetup.Click += new System.EventHandler(this.tsSetup_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
             // tbOutroInpu
             // 
             this.tbOutroInpu.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::vMixMonitor.Properties.Settings.Default, "OutroInput", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -230,49 +268,14 @@
             this.tbUrl.Size = new System.Drawing.Size(233, 20);
             this.tbUrl.TabIndex = 2;
             this.tbUrl.Text = global::vMixMonitor.Properties.Settings.Default.vMixUrl;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsSetup,
-            this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1881, 24);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // tsSetup
-            // 
-            this.tsSetup.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.tsSetup.Name = "tsSetup";
-            this.tsSetup.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.tsSetup.Size = new System.Drawing.Size(49, 20);
-            this.tsSetup.Text = "Setup";
-            this.tsSetup.ToolTipText = "Setup ";
-            this.tsSetup.Click += new System.EventHandler(this.tsSetup_Click);
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
-            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aboutToolStripMenuItem.Text = "About";
+            
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1881, 956);
+            
             this.Controls.Add(this.lblMicStatus);
             this.Controls.Add(this.lblActiveInput);
             this.Controls.Add(this.groupBox1);
@@ -313,6 +316,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsSetup;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.WebBrowser webHelp;
     }
 }
 
