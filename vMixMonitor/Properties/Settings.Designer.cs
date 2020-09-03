@@ -25,18 +25,6 @@ namespace vMixMonitor.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://192.168.0.33:8080")]
-        public string vMixUrl {
-            get {
-                return ((string)(this["vMixUrl"]));
-            }
-            set {
-                this["vMixUrl"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Loading Timer")]
         public string TimerKeyword {
             get {
@@ -44,18 +32,6 @@ namespace vMixMonitor.Properties {
             }
             set {
                 this["TimerKeyword"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Audio Input")]
-        public string AudiouInput {
-            get {
-                return ((string)(this["AudiouInput"]));
-            }
-            set {
-                this["AudiouInput"] = value;
             }
         }
         
@@ -73,18 +49,6 @@ namespace vMixMonitor.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Camera 3 ")]
-        public string OutroInput {
-            get {
-                return ((string)(this["OutroInput"]));
-            }
-            set {
-                this["OutroInput"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool isTestStream {
             get {
@@ -92,6 +56,42 @@ namespace vMixMonitor.Properties {
             }
             set {
                 this["isTestStream"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://192.168.1.44:8088")]
+        public string vMixUrl {
+            get {
+                return ((string)(this["vMixUrl"]));
+            }
+            set {
+                this["vMixUrl"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Camera 2")]
+        public string AudiouInput {
+            get {
+                return ((string)(this["AudiouInput"]));
+            }
+            set {
+                this["AudiouInput"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Off the AIR ")]
+        public string OutroInput {
+            get {
+                return ((string)(this["OutroInput"]));
+            }
+            set {
+                this["OutroInput"] = value;
             }
         }
     }

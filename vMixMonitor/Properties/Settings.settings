@@ -2,23 +2,23 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="vMixMonitor.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="vMixUrl" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://192.168.0.33:8080</Value>
-    </Setting>
     <Setting Name="TimerKeyword" Type="System.String" Scope="User">
       <Value Profile="(Default)">Loading Timer</Value>
-    </Setting>
-    <Setting Name="AudiouInput" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Audio Input</Value>
     </Setting>
     <Setting Name="IsMasterOutput" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="OutroInput" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Camera 3 </Value>
-    </Setting>
     <Setting Name="isTestStream" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="vMixUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://192.168.1.44:8088</Value>
+    </Setting>
+    <Setting Name="AudiouInput" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Camera 2</Value>
+    </Setting>
+    <Setting Name="OutroInput" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Off the AIR </Value>
     </Setting>
   </Settings>
 </SettingsFile>
