@@ -316,7 +316,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsSetup;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.WebBrowser webHelp;
     }
 }
 
