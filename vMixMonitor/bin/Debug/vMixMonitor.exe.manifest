@@ -109,7 +109,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3etmJOKdthMOxv0BSLvd9DAPheUfVABf0MF41KWyh2k=</dsig:DigestValue>
+        <dsig:DigestValue>jqfnRCeSg/Mxq2oy0dEVI5Dp2rVkhHXpnkuXuzDPsus=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -122,13 +122,13 @@
       <dsig:DigestValue>SAS1genf+pTKBFc5yYMuWX8CtjUQiiOixzxpADhvFtE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="vMixMonitor.exe.config" size="1595">
+  <file name="vMixMonitor.exe.config" size="1588">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>jIwOEPqtyKqxWojAPwHAYzwEj2psPdoED104pz4f4mM=</dsig:DigestValue>
+      <dsig:DigestValue>GA6eZZgojVKQfFdnfkBSglMj3D44VajKaL541QyZu1w=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

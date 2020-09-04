@@ -1,0 +1,109 @@
+2020-09-04 12:26:26.976 -07:00 [DBG] Refresh API Doc
+2020-09-04 12:26:27.117 -07:00 [DBG] Read API
+2020-09-04 12:26:27.781 -07:00 [DBG] Refresh API Doc
+2020-09-04 12:26:27.781 -07:00 [DBG] Read API
+2020-09-04 12:26:28.236 -07:00 [ERR] Reader Error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.44:8088
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.Xml.XmlDownloadManager.GetNonFileStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlTextReaderImpl.FinishInitUriString()
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings)
+   at vMixMonitor.vMixHelper.ApiDoc() in G:\projects\vMix Monitor\vMixMonitor\Helpers\vMixHelper.cs:line 136
+2020-09-04 12:26:28.275 -07:00 [DBG] Done Refresh
+2020-09-04 12:26:28.277 -07:00 [DBG] Refresh API Doc
+2020-09-04 12:26:28.277 -07:00 [DBG] Read API
+2020-09-04 12:26:28.787 -07:00 [DBG] Refresh API Doc
+2020-09-04 12:26:28.787 -07:00 [DBG] Read API
+2020-09-04 12:26:28.803 -07:00 [ERR] Reader Error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.44:8088
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.Xml.XmlDownloadManager.GetNonFileStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlTextReaderImpl.FinishInitUriString()
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings)
+   at vMixMonitor.vMixHelper.ApiDoc() in G:\projects\vMix Monitor\vMixMonitor\Helpers\vMixHelper.cs:line 136
+2020-09-04 12:26:28.803 -07:00 [DBG] Done Refresh
+2020-09-04 12:26:29.287 -07:00 [DBG] Refresh API Doc
+2020-09-04 12:26:29.287 -07:00 [DBG] Read API
+2020-09-04 12:26:29.318 -07:00 [ERR] Reader Error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.44:8088
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.Xml.XmlDownloadManager.GetNonFileStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlTextReaderImpl.FinishInitUriString()
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings)
+   at vMixMonitor.vMixHelper.ApiDoc() in G:\projects\vMix Monitor\vMixMonitor\Helpers\vMixHelper.cs:line 136
+2020-09-04 12:26:29.318 -07:00 [DBG] Done Refresh
+2020-09-04 12:26:29.787 -07:00 [DBG] Refresh API Doc
+2020-09-04 12:26:29.787 -07:00 [DBG] Read API
+2020-09-04 12:26:29.818 -07:00 [ERR] Reader Error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.44:8088
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.Xml.XmlDownloadManager.GetNonFileStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlTextReaderImpl.FinishInitUriString()
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings)
+   at vMixMonitor.vMixHelper.ApiDoc() in G:\projects\vMix Monitor\vMixMonitor\Helpers\vMixHelper.cs:line 136
+2020-09-04 12:26:29.818 -07:00 [DBG] Done Refresh
+2020-09-04 12:26:30.287 -07:00 [DBG] Refresh API Doc
+2020-09-04 12:26:30.287 -07:00 [DBG] Read API
+2020-09-04 12:26:30.318 -07:00 [ERR] Reader Error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.44:8088
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.Xml.XmlDownloadManager.GetNonFileStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlTextReaderImpl.FinishInitUriString()
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings)
+   at vMixMonitor.vMixHelper.ApiDoc() in G:\projects\vMix Monitor\vMixMonitor\Helpers\vMixHelper.cs:line 136
+2020-09-04 12:26:30.318 -07:00 [DBG] Done Refresh
+2020-09-04 12:26:30.787 -07:00 [DBG] Refresh API Doc
+2020-09-04 12:26:30.787 -07:00 [DBG] Read API
+2020-09-04 12:26:30.818 -07:00 [ERR] Reader Error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.44:8088
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.Xml.XmlDownloadManager.GetNonFileStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlTextReaderImpl.FinishInitUriString()
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings)
+   at vMixMonitor.vMixHelper.ApiDoc() in G:\projects\vMix Monitor\vMixMonitor\Helpers\vMixHelper.cs:line 136
+2020-09-04 12:26:30.818 -07:00 [DBG] Done Refresh
+2020-09-04 12:26:31.287 -07:00 [DBG] Refresh API Doc
+2020-09-04 12:26:31.287 -07:00 [DBG] Read API
+2020-09-04 12:26:31.334 -07:00 [ERR] Reader Error
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.44:8088
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.Xml.XmlDownloadManager.GetNonFileStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlTextReaderImpl.FinishInitUriString()
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings)
+   at vMixMonitor.vMixHelper.ApiDoc() in G:\projects\vMix Monitor\vMixMonitor\Helpers\vMixHelper.cs:line 136
+2020-09-04 12:26:31.334 -07:00 [DBG] Done Refresh
