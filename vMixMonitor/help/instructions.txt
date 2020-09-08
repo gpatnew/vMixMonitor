@@ -37,9 +37,9 @@ Setup displays the dialog to set the values of the vMIx inputs to be used in mon
 
 
 
+About
 
-
-Help - displays this document.
+	Help - displays this document.
 
 We use this app to provide our worship team and pastor with a monitor that helps them see the state of the Live Broadcast.
 
